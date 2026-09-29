@@ -3,11 +3,15 @@
 <head>
     <meta name="google-site-verification" content="ujUxd5MtA9LPRFlOCkSGWCQcZvS01MimAZOGZNifjaE" />
     <meta charset="UTF-8">
-    <!-- باقي الكود ... -->
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="آزو، دار عطور عراقية الجذور. اكتشف المجموعة وقصة العلامة واطلب عبر واتساب.">
+    <meta name="theme-color" content="#0b0a0a">
+    <meta name="color-scheme" content="dark">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%230b0a0a'/%3E%3Cpath d='M9 24L16 7l7 17M12 18h8' fill='none' stroke='%23b8976b' stroke-width='2'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <title>ĀZU | من بلاد الرافدين إلى عالمك</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&amp;family=Inter:wght@300;400;500&amp;family=Noto+Kufi+Arabic:wght@300;400;500&amp;display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root { --black: #0b0a0a; --charcoal: #1a1818; --gold: #b8976b; --gold-light: #d4b48c; --warm-white: #f5efe8; --text-body: #cbc3b8; --serif: 'Cormorant Garamond', serif; --sans: 'Inter', sans-serif; }
@@ -181,29 +185,213 @@
         }
         .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
         .reveal.visible { opacity: 1; transform: translateY(0); }
+/* Refinements: original palette, composition and content are preserved. */
+:root { color-scheme: dark; --arabic: 'Noto Kufi Arabic', Tahoma, Arial, sans-serif; --nav-height: 88px; }
+[hidden] { display: none !important; }
+html { scroll-padding-top: calc(var(--nav-height) + 20px); }
+body { overflow-wrap: break-word; }
+.product-photo { display: block; flex: 0 0 160px; width: 160px; height: 224px; object-fit: contain; background: var(--black); border: 1px solid rgba(184,151,107,.18); }
+.product-photo-detail { width: 100%; height: min(42svh, 340px); margin: 0 auto 24px; border: 0; }
+html[lang="ar"] body { font-family: var(--arabic); }
+button, input, textarea { font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+button { touch-action: manipulation; }
+a.btn-gold { text-decoration: none; }
+button:disabled { cursor: not-allowed; opacity: .45; }
+:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 5px; }
+::selection { background: var(--gold); color: var(--black); }
+.container { width: 100%; }
+.logo { text-decoration: none; flex: 0 0 auto; direction: ltr; }
+.hero-content { max-width: 700px; }
+.hero { min-height: 100svh; padding-top: calc(var(--nav-height) + 70px); }
+.hero h1 { direction: ltr; text-align: start; }
+html[dir="rtl"] .hero h1 { text-align: right; }
+html[lang="ar"] :is(.section-title, .cat-title, .product-row .info h3, .product-name, .cat-item h4, .checkout-content h2) { font-family: var(--arabic); letter-spacing: 0; line-height: 1.65; }
+html[lang="ar"] :is(.btn-gold, .section-label, .nav-links, .add-cart, .detail-title, .checkout-content label, .submit-order, .footer-grid .col h4) { font-family: var(--arabic); letter-spacing: 0; }
+html[lang="ar"] .section-title { font-size: clamp(1.8rem, 4vw, 3rem); }
+html[lang="ar"] .hero-content .tagline { font-family: var(--arabic); font-style: normal; line-height: 1.9; }
+html[lang="ar"] .product-row .info :is(.sub, .short-desc) { font-family: var(--arabic); font-style: normal; }
+.section-label { font-size: .8125rem; }
+.nav-links, .btn-gold { font-size: .875rem; }
+.nav-links a { display: block; padding-block: 7px; }
+.nav-links a[aria-current="location"] { color: var(--warm-white); }
+.btn-gold { min-height: 46px; transition: background .25s, color .25s, border-color .25s; }
+.nav-actions { gap: 12px; }
+.nav-actions button, .menu-toggle { min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+.nav-actions .lang-toggle { font-size: .875rem; }
+#cartToggle { position: relative; gap: 4px; }
+#cartToggle svg { width: 22px; height: 22px; }
+.cart-count { position: static; margin: 0; padding: 0 5px; min-width: 19px; line-height: 19px; font-family: var(--sans); font-size: .75rem; }
+.menu-toggle { display: none; background: transparent; border: 0; color: var(--gold-light); }
+.menu-toggle svg { width: 24px; height: 24px; }
+.skip-link { position: fixed; top: 12px; inset-inline-start: 20px; z-index: 5000; padding: 10px 16px; background: var(--gold); color: var(--black); transform: translateY(-180%); }
+.skip-link:focus { transform: translateY(0); }
+.category-section { padding: 0; }
+.cat-head { list-style: none; gap: 16px; min-height: 70px; }
+.cat-head::-webkit-details-marker { display: none; }
+.cat-head .cat-title { font-size: 1.6rem; }
+.cat-head .toggle-icon { flex-shrink: 0; }
+.category-section[open] .toggle-icon { transform: rotate(180deg); }
+.category-products { max-height: none; overflow: visible; transition: none; }
+.product-row { gap: 18px; padding: 24px 0; }
+.product-row .info { flex: 1; min-width: 0; }
+.product-row .info h3 { font-size: 1.55rem; }
+.product-row .info .short-desc { font-size: 1rem; max-width: 620px; margin-block: 8px; }
+.product-price { font-size: .875rem; color: var(--gold-light); display: block; margin-top: 8px; }
+.product-row .action { flex-shrink: 0; }
+.cat-item h4 { line-height: 1.7; }
+.cat-item p, .footer-grid .col h4 { font-size: .875rem; }
+.story-section p { text-align: start; }
+.story-section .highlight { font-family: inherit; }
+.meso-grid > * { min-width: 0; }
+.meso-visual .abstract-block { overflow: hidden; }
+.reveal { opacity: 1; transform: none; }
+.reveal.is-pending { opacity: 0; transform: translateY(18px); }
+.reveal.visible { opacity: 1; transform: none; }
+.cart-dropdown { top: calc(100% + 8px); left: auto; inset-inline-end: 24px; width: min(390px, calc(100vw - 32px)); min-width: 0; max-height: min(70svh, 560px); overflow-y: auto; overscroll-behavior: contain; padding: 20px; }
+.cart-heading { font-size: 1rem; color: var(--gold-light); margin-bottom: 14px; font-weight: 400; }
+.cart-item { gap: 12px; padding-block: 16px; align-items: center; font-size: .875rem; }
+.cart-item-info { min-width: 0; flex: 1; }
+.cart-item-info strong { display: block; font-weight: 400; color: var(--warm-white); }
+.cart-item-info small { font-size: .8125rem; }
+.offer-note { display: block; margin-top: 6px; color: var(--gold-light); font-size: .8125rem; line-height: 1.8; }
+.product-offer { margin-block: 12px; font-size: .875rem; }
+.quantity-controls { display: flex; align-items: center; gap: 3px; direction: ltr; }
+.quantity-controls button, .remove-item { min-width: 36px; min-height: 40px; background: transparent; color: var(--gold-light); border: 1px solid rgba(184,151,107,.2); cursor: pointer; }
+.remove-item { border: 0; }
+.quantity-controls span { min-width: 22px; text-align: center; }
+.cart-total { padding-block: 10px; gap: 12px; }
+.delivery-label { display: block; margin-block: 8px; font-size: .875rem; color: var(--text-body); }
+.delivery-zone { width: 100%; min-width: 0; min-height: 46px; padding: 10px 8px; border: 1px solid rgba(184,151,107,.3); background: var(--charcoal); color: var(--warm-white); font: inherit; font-size: 1rem; }
+.delivery-rates { margin-block: 8px; color: var(--text-body); font-size: .8125rem; line-height: 1.9; white-space: pre-line; }
+.delivery-totals { margin-block: 12px 16px; font-size: .875rem; }
+.cost-row { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding-block: 7px; }
+.cost-row > :first-child { min-width: 0; }
+.cost-row > :last-child { flex-shrink: 0; }
+.grand-total { border-top: 1px solid rgba(184,151,107,.2); margin-top: 7px; padding-top: 14px; color: var(--gold-light); font-weight: 500; }
+.checkout-btn { min-height: 46px; font-family: inherit; }
+body.modal-open { overflow: hidden; }
+dialog.product-modal, dialog.checkout-modal { color: var(--warm-white); background: transparent; border: 0; padding: 20px; width: 100%; height: 100%; max-width: 100%; max-height: 100%; margin: 0; inset: 0; overflow: auto; backdrop-filter: none; }
+dialog:not([open]) { display: none !important; }
+dialog.product-modal[open], dialog.checkout-modal[open] { display: flex; align-items: center; justify-content: center; }
+dialog::backdrop { background: rgba(11,10,10,.92); backdrop-filter: blur(10px); }
+.modal-content, .checkout-content { max-height: calc(100svh - 40px); overflow-y: auto; overscroll-behavior: contain; padding: 48px 32px 28px; scrollbar-width: thin; scrollbar-color: var(--gold) var(--charcoal); }
+.checkout-wrap { width: min(540px, 100%); }
+.checkout-content { max-width: none; }
+.modal-content .close-btn, .checkout-content .close-checkout { top: 8px; left: auto; inset-inline-end: 12px; min-width: 44px; min-height: 44px; }
+.modal-content .product-name { font-size: 2.2rem; }
+.modal-content .notes { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+.modal-content .notes div strong, .modal-content .extra-details .detail-title { font-size: .8125rem; letter-spacing: 0; }
+.modal-content .notes div, .modal-content .extra-details .detail-text, .modal-content .product-desc { font-size: 1rem; }
+.modal-content .product-sub { font-family: inherit; font-style: normal; }
+.modal-content .price-row { gap: 16px; font-family: inherit; font-size: 1.25rem; }
+.modal-content .price-row .size { font-size: .875rem; }
+.modal-content .add-cart { min-height: 50px; font-family: inherit; letter-spacing: 0; }
+.checkout-content h2 { margin-bottom: 12px; }
+.checkout-content label { font-size: .875rem; }
+.checkout-content input, .checkout-content textarea { font-family: inherit; font-size: 1rem; min-height: 46px; }
+.checkout-content textarea { resize: vertical; }
+.checkout-content .total-final { text-align: end; font-family: inherit; font-size: 1.25rem; }
+.checkout-content .submit-order { font-family: inherit; letter-spacing: 0; }
+.checkout-help, .checkout-note { color: var(--text-body); font-size: .875rem; }
+.checkout-note { text-align: center; margin-top: 12px; }
+.field-error, .form-feedback { font-size: .8125rem; line-height: 1.8; margin-top: 6px; color: #f3bbb0; }
+[aria-invalid="true"] { border-color: #d89787 !important; }
+.form-feedback { color: var(--gold-light); }
+#whatsappOrderLink { display: block; text-align: center; margin-top: 12px; color: var(--gold-light); }
+.toast { position: fixed; bottom: 28px; left: 50%; transform: translate(-50%, 15px); z-index: 3500; background: var(--charcoal); border: 1px solid var(--gold); padding: 12px 24px; max-width: calc(100vw - 40px); width: max-content; font-size: .875rem; text-align: center; opacity: 0; pointer-events: none; transition: opacity .2s, transform .2s; }
+.toast.show { opacity: 1; transform: translate(-50%, 0); }
+.brand-intro { width: 100%; height: 100%; max-width: 100%; max-height: 100%; margin: 0; inset: 0; border: 0; background: var(--black); color: var(--gold); padding: 28px; }
+.brand-intro[open] { display: grid; place-items: center; }
+.brand-intro::backdrop { background: var(--black); }
+.intro-center { text-align: center; animation: intro-reveal .8s ease both; }
+.intro-wordmark { font-family: var(--serif); font-size: clamp(4rem, 13vw, 7rem); font-weight: 300; letter-spacing: 6px; line-height: 1.3; direction: ltr; }
+.intro-line { width: 70px; height: 1px; margin: 24px auto; background: var(--gold); transform-origin: center; animation: intro-line 1.05s ease both; }
+.intro-caption { font-size: .875rem; color: var(--text-body); }
+.intro-skip { position: absolute; bottom: max(28px, env(safe-area-inset-bottom)); inset-inline-end: 28px; border: 0; border-bottom: 1px solid var(--gold); padding: 10px 4px; background: none; color: var(--gold-light); font: inherit; font-size: .875rem; cursor: pointer; }
+.brand-intro.is-leaving { animation: intro-leave .3s ease both; }
+@keyframes intro-reveal { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@keyframes intro-line { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes intro-leave { to { opacity: 0; } }
+@media (max-width: 992px) { .nav-links { gap: 18px; } .navbar { padding-inline: 22px; } }
+@media (max-width: 768px) {
+  :root { --nav-height: 76px; }
+  .container { padding-inline: 22px; }
+  .navbar { flex-direction: row; flex-wrap: wrap; gap: 0; padding: 10px 16px; }
+  .logo { font-size: 1.7rem; }
+  .menu-toggle { display: inline-flex; margin-inline-start: auto; margin-inline-end: 8px; }
+  .nav-actions { gap: 4px; }
+  .nav-links { display: none; order: 4; flex-basis: 100%; flex-direction: column; gap: 0; padding-top: 12px; padding-bottom: 8px; text-align: center; font-size: 1rem; }
+  .navbar.menu-open .nav-links { display: flex; }
+  .nav-links a { padding-block: 10px; }
+  .hero { padding-top: 138px; padding-bottom: 72px; }
+  .hero-content h1 { font-size: clamp(4rem, 18vw, 6rem); }
+  .hero-content .desc { font-size: 1rem; }
+  .hero-buttons { gap: 12px; }
+  section { padding-block: 60px; }
+  .product-row { align-items: stretch; }
+  .product-row .product-photo { flex: none; width: 100%; height: 300px; }
+  .product-row .action .btn-gold { width: 100%; }
+  .cat-head .cat-title { font-size: 1.3rem; }
+  .cat-grid { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; }
+  .cat-item { padding: 20px 10px; }
+  .cat-item h4 { font-size: 1.2rem; }
+  .meso-grid { gap: 28px; }
+  .meso-visual .abstract-block { height: 130px; }
+  .cart-dropdown { inset-inline-end: 16px; }
+  .modal-content, .checkout-content { padding: 54px 20px 24px; }
+  .modal-content .product-name { font-size: 1.8rem; }
+  dialog.product-modal, dialog.checkout-modal { padding: 12px; }
+  .modal-content, .checkout-content { max-height: calc(100svh - 24px); }
+  .toast { bottom: 90px; }
+}
+@media (max-width: 359px) { .navbar { padding-inline: 10px; } .logo { letter-spacing: 3px; } .container { padding-inline: 18px; } }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .reveal.is-pending { opacity: 1; transform: none; }
+}
+
     </style>
 </head>
 <body>
+    <a class="skip-link" href="#mainContent">انتقل إلى المحتوى</a>
+    <dialog class="brand-intro" id="brandIntro" aria-label="مرحباً بك في آزو">
+        <div class="intro-center"><div class="intro-wordmark">ĀZU</div><div class="intro-line" aria-hidden="true"></div><p class="intro-caption">من بلاد الرافدين إلى عالمك.</p></div>
+        <button type="button" class="intro-skip" autofocus>تخطي المقدمة</button>
+    </dialog>
     <!-- ===== شريط التنقل ===== -->
-    <nav class="navbar" id="navbar">
-        <div class="logo">ĀZU</div>
-        <ul class="nav-links">
+    <nav class="navbar" id="navbar" aria-label="التنقل الرئيسي">
+        <a class="logo" href="#home" aria-label="ĀZU">ĀZU</a>
+        <ul class="nav-links" id="navLinks">
             <li><a href="#home">الرئيسية</a></li>
             <li><a href="#collection">المجموعة</a></li>
             <li><a href="#story">نبذة عنا</a></li>
             <li><a href="#contact">تواصل</a></li>
         </ul>
+        <button type="button" class="menu-toggle" id="menuToggle" aria-label="القائمة" aria-expanded="false" aria-controls="navLinks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
         <div class="nav-actions">
-            <button id="cartToggle" aria-label="Cart">🛒 <span class="cart-count" id="cartCount">0</span></button>
-            <button class="lang-toggle" id="langToggle">EN</button>
+            <button type="button" id="cartToggle" aria-label="السلة" aria-expanded="false" aria-controls="cartDropdown"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="cart-count" id="cartCount" aria-hidden="true">0</span></button>
+            <button type="button" class="lang-toggle" id="langToggle">EN</button>
         </div>
-        <div class="cart-dropdown" id="cartDropdown">
+        <div class="cart-dropdown" id="cartDropdown" role="region" aria-labelledby="cartHeading" hidden>
+            <h2 class="cart-heading" id="cartHeading">سلة التسوق</h2>
             <div id="cartItems"><div class="empty-msg">السلة فارغة</div></div>
-            <div class="cart-total" style="display:none;" id="cartTotalWrap"><span>المجموع</span><span id="cartTotal">0 د.ع</span></div>
-            <button class="checkout-btn" id="openCheckoutBtn">إتمام الطلب</button>
+            <div class="cart-total" style="display:none;" id="cartTotalWrap"><span>مجموع المنتجات</span><span id="cartTotal">0 د.ع</span></div>
+            <div id="cartDeliveryDetails" hidden>
+                <label class="delivery-label" for="cartDeliveryZone">منطقة التوصيل</label>
+                <select class="delivery-zone" id="cartDeliveryZone" aria-describedby="cartDeliveryRates"></select>
+                <p class="delivery-rates" id="cartDeliveryRates"></p>
+                <div class="delivery-totals" aria-live="polite" aria-atomic="true">
+                    <div class="cost-row"><span class="delivery-fee-label">سعر التوصيل</span><span id="cartDeliveryFee">—</span></div>
+                    <div class="cost-row grand-total"><span class="order-total-label">الإجمالي شامل التوصيل</span><span id="cartGrandTotal">—</span></div>
+                </div>
+            </div>
+            <button type="button" class="checkout-btn" id="openCheckoutBtn" disabled>إتمام الطلب</button>
         </div>
     </nav>
 
+    <main id="mainContent" tabindex="-1">
     <!-- ===== HERO ===== -->
     <section class="hero" id="home">
         <div class="container hero-content">
@@ -225,6 +413,7 @@
             <h2 class="section-title">“المجموعة”</h2>
             <div class="gold-line"></div>
             <div id="productList"></div>
+            <noscript><p>لعرض المنتجات والسلة، فعّل JavaScript أو <a href="https://wa.me/9647760975332" style="color:var(--gold-light)">تواصل معنا عبر واتساب</a>.</p></noscript>
         </div>
     </section>
 
@@ -239,7 +428,7 @@
                 <p>نعيد تخيل عبق الماضي عبر تركيبات عطرية معاصرة، تحمل في طياتها روح دجلة والفرات، ودفء الصحراء، وسحر الذهب القديم.</p>
                 <p>كل عطر من ĀZU هو رحلة عبر الزمن، دعوة لاستكشاف جماليات بلاد الرافدين بطريقة حديثة وأنيقة.</p>
             </div>
-            <div class="meso-visual reveal">
+            <div class="meso-visual reveal" aria-hidden="true">
                 <div class="abstract-block">𒀭𒈨𒌍</div>
                 <div class="abstract-block small">𒁾𒊬</div>
                 <div class="abstract-block small" style="background:#1f1b17;">✦ ✦ ✦</div>
@@ -258,7 +447,6 @@
                 <div class="cat-item reveal"><h4>سبلاش</h4><p>انتعاش يدوم</p></div>
                 <div class="cat-item reveal"><h4>معطر جو</h4><p>أجواء تعبق بالرقي</p></div>
                 <div class="cat-item reveal"><h4>زيت شعر</h4><p>فخامة تدوم قريباً</p></div>
-                <div class="cat-item reveal"><h4>معطر شعر</h4><p>لمسة عطرية خفيفة</p></div>
                 <div class="cat-item reveal"><h4>بخور</h4><p>دخان قديم بأسلوب جديد</p></div>
             </div>
         </div>
@@ -272,13 +460,14 @@
             <div class="gold-line"></div>
             <p>ĀZU هي دار عطور نيش حديثة مستوحاة من روح حضارات بلاد ما بين النهرين. يرتكز اسم "ĀZU" على معاني الحكيم والمعالج وحافظ الأسرار، ليجسد رؤية تحوّل العطر من مجرد منتج إلى طقسٍ حسي وعاطفي متكامل.</p>
             <p>في ĀZU، العطر ليس رائحة فقط، بل هو ذاكرة وحضور وهوية وأثر يبقى بعد اللحظة نفسها. كل ابتكار نصنعه يهدف إلى إيقاظ المشاعر وخلق تجربة حسية تعبّر عن الشخصية وتترك انطباعًا لا يُنسى.</p>
-            <p>تضم مجموعاتنا العطور، والبخور، وعطور الشعر، ومعطرات الأجواء، وزيوت الشعر، وجميعها تُصنع برؤية تجمع بين الأصالة، والفن، والفخامة الحديثة. مستلهمين الأساطير والشعر وإرث بلاد الرافدين الخالد، تحمل ĀZU هوية فريدة تتسم بالغموض والتعبير والعمق الإنساني.</p>
+            <p>تضم مجموعاتنا العطور، والبخور، ومعطرات الأجواء، وزيوت الشعر، وجميعها تُصنع برؤية تجمع بين الأصالة، والفن، والفخامة الحديثة. مستلهمين الأساطير والشعر وإرث بلاد الرافدين الخالد، تحمل ĀZU هوية فريدة تتسم بالغموض والتعبير والعمق الإنساني.</p>
             <div class="highlight">نحن لا نصنع نسخًا مكررة، بل نصنع تجارب.</div>
             <p style="font-family: var(--serif); font-size: 1.3rem; color: var(--gold); margin-top: 30px;">ĀZU — نُقطّر الذاكرة في زجاجة.</p>
         </div>
     </section>
 
     <!-- ===== FOOTER (تم تحديث الروابط وإزالة البريد الإلكتروني) ===== -->
+    </main>
     <footer id="contact">
         <div class="container">
             <div class="footer-grid">
@@ -306,7 +495,7 @@
                 <div class="col">
                     <h4>الدعم</h4>
                     <ul>
-                        <li><a href="tel:+9647760975332">0776 097 5332</a></li>
+                        <li><a href="tel:+9647760975332" dir="ltr">0776 097 5332</a></li>
                     </ul>
                 </div>
             </div>
@@ -316,84 +505,75 @@
 
     <!-- ===== زر واتساب العائم (تم إصلاح الرابط) ===== -->
     <a href="https://wa.me/9647760975332" target="_blank" rel="noopener noreferrer" class="whatsapp-fab" aria-label="WhatsApp">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
         </svg>
     </a>
 
     <!-- ===== MODALS ===== -->
-    <div class="product-modal" id="productModal">
+    <dialog class="product-modal" id="productModal" aria-labelledby="productTitle">
         <div class="modal-content">
-            <button class="close-btn" id="closeModal">✕</button>
+            <button type="button" class="close-btn" id="closeModal" aria-label="إغلاق تفاصيل المنتج" autofocus>✕</button>
             <div id="modalBody"></div>
         </div>
-    </div>
+    </dialog>
 
-    <div class="checkout-modal" id="checkoutModal">
-        <div class="checkout-wrap">
-            <div class="checkout-content">
-                <button class="close-checkout" id="closeCheckout">✕</button>
-                <h2>إتمام الطلب</h2>
-                <p style="color:var(--text-body); font-size:0.9rem;">يرجى تعبئة البيانات التالية لتأكيد طلبك</p>
-                <label>الاسم الكامل</label>
-                <input type="text" id="custName" placeholder="أدخل اسمك" />
-                <label>رقم الهاتف (للتأكيد)</label>
-                <input type="tel" id="custPhone" placeholder="07XXXXXXXX" />
-                <label>العنوان (المدينة / المنطقة)</label>
-                <input type="text" id="custAddress" placeholder="مثال: بغداد - المنصور" />
-                <label>ملاحظات إضافية (اختياري)</label>
-                <textarea id="custNotes" rows="2" placeholder="أي تفاصيل إضافية..."></textarea>
+    <dialog class="checkout-modal" id="checkoutModal" aria-labelledby="checkoutTitle">
+        <div class="checkout-wrap"><div class="checkout-content">
+            <button type="button" class="close-checkout" id="closeCheckout" aria-label="إغلاق الطلب">✕</button>
+            <h2 id="checkoutTitle">إتمام الطلب</h2>
+            <p class="checkout-help">أدخل بياناتك لتجهيز طلبك.</p>
+            <form id="checkoutForm" novalidate>
+                <label for="custName">الاسم الكامل</label>
+                <input type="text" id="custName" name="name" placeholder="أدخل اسمك" autocomplete="name" required minlength="2" maxlength="100" aria-describedby="custNameError">
+                <p class="field-error" id="custNameError" aria-live="polite"></p>
+                <label for="custPhone">رقم الهاتف (للتأكيد)</label>
+                <input type="tel" id="custPhone" name="tel" placeholder="07XXXXXXXXX" autocomplete="tel" inputmode="tel" dir="ltr" required maxlength="24" aria-describedby="custPhoneError">
+                <p class="field-error" id="custPhoneError" aria-live="polite"></p>
+                <label for="checkoutDeliveryZone">منطقة التوصيل</label>
+                <select class="delivery-zone" id="checkoutDeliveryZone" name="delivery-area" required aria-describedby="checkoutDeliveryRates checkoutDeliveryZoneError"></select>
+                <p class="delivery-rates" id="checkoutDeliveryRates"></p>
+                <p class="field-error" id="checkoutDeliveryZoneError" aria-live="polite"></p>
+                <label for="custAddress">العنوان (المدينة / المنطقة)</label>
+                <input type="text" id="custAddress" name="street-address" placeholder="مثال: بغداد - المنصور" autocomplete="street-address" required minlength="3" maxlength="240" aria-describedby="custAddressError">
+                <p class="field-error" id="custAddressError" aria-live="polite"></p>
+                <label for="custNotes">ملاحظات إضافية (اختياري)</label>
+                <textarea id="custNotes" name="notes" rows="2" maxlength="600" placeholder="أي تفاصيل إضافية..."></textarea>
                 <div class="order-summary" id="checkoutSummary"></div>
-                <div class="total-final" id="checkoutTotal">0 د.ع</div>
-                <button class="submit-order" id="submitOrderBtn">تأكيد الطلب عبر واتساب</button>
-                <p style="color:var(--text-body); font-size:0.7rem; margin-top:12px; text-align:center;">سيتم توجيهك إلى واتساب لتأكيد الطلب مع فريق ĀZU</p>
-            </div>
-        </div>
-    </div>
+                <div class="delivery-totals" aria-live="polite" aria-atomic="true">
+                    <div class="cost-row"><span class="checkout-subtotal-label">مجموع المنتجات</span><span id="checkoutSubtotal">0 د.ع</span></div>
+                    <div class="cost-row"><span class="delivery-fee-label">سعر التوصيل</span><span id="checkoutDeliveryFee">—</span></div>
+                    <div class="cost-row grand-total"><span class="order-total-label">الإجمالي شامل التوصيل</span><span id="checkoutTotal">—</span></div>
+                </div>
+                <button type="submit" class="submit-order" id="submitOrderBtn">المتابعة عبر واتساب</button>
+                <p class="checkout-note">راجع الرسالة وأرسلها في واتساب لتأكيد الطلب مع فريق ĀZU.</p>
+                <p class="form-feedback" id="orderFeedback" role="status" aria-live="polite"></p>
+                <a id="whatsappOrderLink" target="_blank" rel="noopener noreferrer" hidden>فتح رسالة الطلب في واتساب</a>
+            </form>
+        </div></div>
+    </dialog>
+    <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
 
     <script>
-        // ============================================================
-        //  التمرير التلقائي
-        // ============================================================
-        document.addEventListener('DOMContentLoaded', function() {
-            const links = document.querySelectorAll('a[href^="#"]');
-            const navbar = document.getElementById('navbar');
-            links.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    const targetId = this.getAttribute('href');
-                    if (targetId === '#') return;
-                    const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        e.preventDefault();
-                        const navbarHeight = navbar.offsetHeight;
-                        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset -
-                            navbarHeight - 20;
-                        window.scrollTo({ top: targetPosition, behavior: 'smooth' });
-                    }
-                });
-            });
-        });
-
-        // ============================================================
-        //  DATA – المنتجات (جميع التعديلات السابقة محفوظة)
-        // ============================================================
+(() => {
+'use strict';
         const productCategories = [{
             name: 'العطور',
             nameEn: 'Perfumes',
             products: [
-                { id: 'kalkamish', name: 'KALKAMISH', nameAr: 'كلكامش', sub: 'Bold. Deep. Unforgettable.', subAr: 'جريء. عميق. لا يُنسى.', desc: 'A powerful fragrance inspired by the legendary strength of Gilgamesh.', descAr: 'عطر قوي مستوحى من القوة الأسطورية لجلجامش.', family: 'Oriental Woody', familyAr: 'شرقي خشبي', top: 'Saffron, Cardamom', topAr: 'زعفران، هيل', heart: 'Oud, Rose', heartAr: 'عود، ورد', base: 'Amber, Musk, Sandalwood', baseAr: 'عنبر، مسك، صندل', size: '100 ml', price: 45000,
+                { id: 'kalkamish', name: 'KALKAMISH', nameAr: 'كلكامش', sub: 'Bold. Deep. Unforgettable.', subAr: 'جريء. عميق. لا يُنسى.', desc: 'A powerful fragrance inspired by the legendary strength of Gilgamesh.', descAr: 'عطر قوي مستوحى من القوة الأسطورية لجلجامش.', family: 'Oriental Woody', familyAr: 'شرقي خشبي', top: 'Saffron, Cardamom', topAr: 'زعفران، هيل', heart: 'Oud, Rose', heartAr: 'عود، ورد', base: 'Amber, Musk, Sandalwood', baseAr: 'عنبر، مسك، صندل', size: '50 ml', price: 40000,
                     ingredients: 'Alcohol, Fragrance, Water', ingredientsAr: 'كحول، عطر، ماء', usage: 'Spray on pulse points.', usageAr: 'يرش على نقاط النبض.', warnings: 'For external use only. Avoid eyes.', warningsAr: 'للاستخدام الخارجي فقط. تجنب العينين.' },
-                { id: 'hader', name: 'HADER', nameAr: 'هادر', sub: 'Strength wrapped in elegance.', subAr: 'قوة مغلفة بأناقة.', desc: 'A sophisticated fragrance built around warm woods and refined spices.', descAr: 'عطر راقٍ مبني على خشب دافئ وبهارات راقية.', family: 'Woody Spicy', familyAr: 'خشبي بهاري', top: 'Cinnamon, Clove', topAr: 'نعناع، تفاح أخضر', heart: 'Cedar, Patchouli', heartAr: 'زهري، كريمي، خشبي', base: 'Vanilla, Leather', baseAr: 'دافئ، دخاني، جلود', size: '50 ml', price: 45000,
+                { id: 'hader', name: 'HADER', nameAr: 'هادر', sub: 'Strength wrapped in elegance.', subAr: 'قوة مغلفة بأناقة.', desc: 'A sophisticated fragrance built around warm woods and refined spices.', descAr: 'عطر راقٍ مبني على خشب دافئ وبهارات راقية.', family: 'Woody Spicy', familyAr: 'خشبي بهاري', top: 'Cinnamon, Clove', topAr: 'نعناع، تفاح أخضر', heart: 'Cedar, Patchouli', heartAr: 'زهري، كريمي، خشبي', base: 'Vanilla, Leather', baseAr: 'دافئ، دخاني، جلود', size: '50 ml', price: 40000,
                     ingredients: 'Alcohol, Fragrance, Water', ingredientsAr: 'كحول، عطر، ماء', usage: 'Spray on pulse points.', usageAr: 'يرش على نقاط النبض.', warnings: 'For external use only. Avoid eyes.', warningsAr: 'للاستخدام الخارجي فقط. تجنب العينين.' },
-                { id: 'shaghaf', name: 'SHAGHAF', nameAr: 'شغف', sub: 'Where emotion becomes fragrance.', subAr: 'حيث يصبح الإحساس عطراً.', desc: 'A sensual and expressive composition around warmth and softness.', descAr: 'تركيبة حسية معبّرة تدور حول الدفء واللطف.', family: 'Oriental Floral', familyAr: 'زهري فاكهي', top: 'Bergamot, Orange Blossom', topAr: 'منعشة، رائحة خضراء، نظافة', heart: 'Jasmine, Ylang Ylang', heartAr: 'زهري، فاكهي', base: 'Musk, Amber, Vanilla', baseAr: 'خشبي، مسكي، مائي', size: '50 ml', price: 45000,
+                { id: 'shaghaf', name: 'SHAGHAF', nameAr: 'شغف', sub: 'Where emotion becomes fragrance.', subAr: 'حيث يصبح الإحساس عطراً.', desc: 'A sensual and expressive composition around warmth and softness.', descAr: 'تركيبة حسية معبّرة تدور حول الدفء واللطف.', family: 'Oriental Floral', familyAr: 'زهري فاكهي', top: 'Bergamot, Orange Blossom', topAr: 'منعشة، رائحة خضراء، نظافة', heart: 'Jasmine, Ylang Ylang', heartAr: 'زهري، فاكهي', base: 'Musk, Amber, Vanilla', baseAr: 'خشبي، مسكي، مائي', size: '50 ml', price: 40000,
                     ingredients: 'Alcohol, Fragrance, Water', ingredientsAr: 'كحول، عطر، ماء', usage: 'Spray on pulse points.', usageAr: 'يرش على نقاط النبض.', warnings: 'For external use only. Avoid eyes.', warningsAr: 'للاستخدام الخارجي فقط. تجنب العينين.' },
-                { id: 'ishtar', name: 'ISHTAR', nameAr: 'عشتار', sub: 'Beauty. Power. Mystery.', subAr: 'جمال. قوة. غموض.', desc: 'Inspired by the goddess Ishtar, balancing sensual floral notes.', descAr: 'مستوحى من الإلهة عشتار، يوازن بين النوتات الزهرية الحسية.', family: 'Floral Oriental', familyAr: 'زهري عنبري', top: 'Litchi, Pink Pepper', topAr: 'زهري، منعش، جلود', heart: 'Rose, Peony', heartAr: 'فانيلا، حمضيات', base: 'Oud, Patchouli, Benzoin', baseAr: 'خشبي، عنبري', size: '50 ml', price: 45000,
+                { id: 'ishtar', name: 'ISHTAR', nameAr: 'عشتار', sub: 'Beauty. Power. Mystery.', subAr: 'جمال. قوة. غموض.', desc: 'Inspired by the goddess Ishtar, balancing sensual floral notes.', descAr: 'مستوحى من الإلهة عشتار، يوازن بين النوتات الزهرية الحسية.', family: 'Floral Oriental', familyAr: 'زهري عنبري', top: 'Litchi, Pink Pepper', topAr: 'زهري، منعش، جلود', heart: 'Rose, Peony', heartAr: 'فانيلا، حمضيات', base: 'Oud, Patchouli, Benzoin', baseAr: 'خشبي، عنبري', size: '50 ml', price: 40000,
                     ingredients: 'Alcohol, Fragrance, Water', ingredientsAr: 'كحول، عطر، ماء', usage: 'Spray on pulse points.', usageAr: 'يرش على نقاط النبض.', warnings: 'For external use only. Avoid eyes.', warningsAr: 'للاستخدام الخارجي فقط. تجنب العينين.' },
-                { id: 'adad', name: 'ADAD', nameAr: 'أَدَد', sub: 'Storm. Power. Renewal.', subAr: 'عاصفة. قوة. تجدد.', desc: 'Inspired by the god of storms, a bold and intense fragrance with a refreshing aquatic heart.', descAr: 'مستوحى من إله العواصف، عطر جريء وحاد مع قلب مائي منعش.', family: 'Aquatic Spicy', familyAr: 'شرقي دخاني', top: 'Sea Salt, Lemon', topAr: 'البرغموت، جيرانيول، قرنفل', heart: 'Cypress, Mint', heartAr: 'الباتشولي، النعناع، الجلود', base: 'Amber, Driftwood', baseAr: 'خشب الأرز، عنبر', size: '50 ml', price: 35000,
+                { id: 'adad', name: 'ADAD', nameAr: 'أَدَد', sub: 'Storm. Power. Renewal.', subAr: 'عاصفة. قوة. تجدد.', desc: 'Inspired by the god of storms, a bold and intense fragrance with a refreshing aquatic heart.', descAr: 'مستوحى من إله العواصف، عطر جريء وحاد مع قلب مائي منعش.', family: 'Aquatic Spicy', familyAr: 'شرقي دخاني', top: 'Sea Salt, Lemon', topAr: 'البرغموت، جيرانيول، قرنفل', heart: 'Cypress, Mint', heartAr: 'الباتشولي، النعناع، الجلود', base: 'Amber, Driftwood', baseAr: 'خشب الأرز، عنبر', size: '50 ml', price: 30000,
                     ingredients: 'Alcohol, Fragrance, Water', ingredientsAr: 'كحول، عطر، ماء', usage: 'Spray on pulse points.', usageAr: 'يرش على نقاط النبض.', warnings: 'For external use only. Avoid eyes.', warningsAr: 'للاستخدام الخارجي فقط. تجنب العينين.' },
-                { id: 'taryaq', name: 'TARYAQ', nameAr: 'ترياق', sub: 'Freshness and Serenity.', subAr: 'انتعاش وهدوء.', desc: 'A green and aromatic fragrance that soothes the senses.', descAr: 'عطر أخضر وعطري يريح الحواس.', family: 'Aromatic Green', familyAr: 'عطري أخضر', top: 'Green notes, Mint', topAr: 'نعناع، نوتة خضراء', heart: 'Jasmine, Geranium, Vanilla', heartAr: 'خشب الصندل، خشب الأرز، نوتة زهرية، Moss', base: 'Woody, Amber, Musk', baseAr: 'فانيلا، مسك، عنبر', size: '50 ml', price: 35000,
+                { id: 'taryaq', name: 'TARYAQ', nameAr: 'ترياق', sub: 'Freshness and Serenity.', subAr: 'انتعاش وهدوء.', desc: 'A green and aromatic fragrance that soothes the senses.', descAr: 'عطر أخضر وعطري يريح الحواس.', family: 'Aromatic Green', familyAr: 'عطري أخضر', top: 'Green notes, Mint', topAr: 'نعناع، نوتة خضراء', heart: 'Jasmine, Geranium, Vanilla', heartAr: 'خشب الصندل، خشب الأرز، نوتة زهرية، Moss', base: 'Woody, Amber, Musk', baseAr: 'فانيلا، مسك، عنبر', size: '50 ml', price: 30000,
                     ingredients: 'Alcohol, Fragrance, Water', ingredientsAr: 'كحول، عطر، ماء', usage: 'Spray on pulse points.', usageAr: 'يرش على نقاط النبض.', warnings: 'For external use only. Avoid eyes.', warningsAr: 'للاستخدام الخارجي فقط. تجنب العينين.' },
-                { id: 'layali', name: 'LAYALI ISHTAR', nameAr: 'ليالي عشتار', sub: 'Feminine. Enchanting. Memorable.', subAr: 'أنثوي. ساحر. لا يُنسى.', desc: 'A feminine fragrance inspired by the legendary beauty of Ishtar, blending floral, aquatic, and woody notes.', descAr: 'عطر نسائي مستوحى من الجمال الأسطوري لعشتار، يمزج بين النوتات الزهرية والمائية والخشبية.', family: 'Floral Aquatic Woody', familyAr: 'زهري مائي خشبي', top: 'White Lotus, Bergamot, Damask Rose', topAr: 'اللوتس الابيض، البرغموت، الورد الدمشقي', heart: 'Madagascar Vanilla, Spring Accord, Sea Breeze', heartAr: 'فانيلا مدغشقر، نوتة ربيعية، نسيم البحر', base: 'Ambroxan, Wood, Musk', baseAr: 'Ambroxan، الخشب، المسك', size: '50 ml', price: 35000,
+                { id: 'layali', name: 'LAYALI ISHTAR', nameAr: 'ليالي عشتار', sub: 'Feminine. Enchanting. Memorable.', subAr: 'أنثوي. ساحر. لا يُنسى.', desc: 'A feminine fragrance inspired by the legendary beauty of Ishtar, blending floral, aquatic, and woody notes.', descAr: 'عطر نسائي مستوحى من الجمال الأسطوري لعشتار، يمزج بين النوتات الزهرية والمائية والخشبية.', family: 'Floral Aquatic Woody', familyAr: 'زهري مائي خشبي', top: 'White Lotus, Bergamot, Damask Rose', topAr: 'اللوتس الابيض، البرغموت، الورد الدمشقي', heart: 'Madagascar Vanilla, Spring Accord, Sea Breeze', heartAr: 'فانيلا مدغشقر، نوتة ربيعية، نسيم البحر', base: 'Ambroxan, Wood, Musk', baseAr: 'Ambroxan، الخشب، المسك', size: '50 ml', price: 30000,
                     ingredients: 'Alcohol, Fragrance, Water', ingredientsAr: 'كحول، عطر، ماء', usage: 'Spray on pulse points.', usageAr: 'يرش على نقاط النبض.', warnings: 'For external use only. Avoid eyes.', warningsAr: 'للاستخدام الخارجي فقط. تجنب العينين.' }
             ]
         }, {
@@ -426,13 +606,6 @@
                     warnings: 'For external use only.', warningsAr: 'للاستخدام الخارجي فقط.' }
             ]
         }, {
-            name: 'معطر شعر',
-            nameEn: 'Hair Mist',
-            products: [
-                { id: 'hairmist1', name: 'ISHTAR MIST', nameAr: 'ضباب عشتار', sub: 'Light. Elegant. Captivating.', subAr: 'خفيف. أنيق. آسر.', desc: 'A delicate hair mist with floral and fruity notes, leaving a light and enchanting trail.', descAr: 'ضباب شعر رقيق بنوتات زهرية وفواكه، يترك أثراً خفيفاً وساحراً.', family: 'Floral Fruity', familyAr: 'زهري فاكهي', top: 'Litchi, Pear', topAr: 'ليتشي، كمثرى', heart: 'Rose, Jasmine', heartAr: 'ورد، ياسمين', base: 'Musk, Vanilla', baseAr: 'مسك، فانيليا', size: '150 ml', price: 120000,
-                    ingredients: 'Alcohol, Water, Fragrance', ingredientsAr: 'كحول، ماء، عطر', usage: 'Spray on hair from a distance.', usageAr: 'يرش على الشعر من مسافة.', warnings: 'For external use only. Avoid eyes.', warningsAr: 'للاستخدام الخارجي فقط. تجنب العينين.' }
-            ]
-        }, {
             name: 'بخور',
             nameEn: 'Bukhoor',
             products: [
@@ -443,303 +616,420 @@
                     warnings: 'Use in a ventilated area. Keep away from flammable materials.', warningsAr: 'يُستخدم في مكان جيد التهوية. يُبعد عن المواد القابلة للاشتعال.' }
             ]
         }];
+// Catalog content comes from the supplied website, with the requested price updates.
+const $ = (selector, root = document) => root.querySelector(selector);
+const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
+const products = new Map(productCategories.flatMap(category => category.products).map(p => [p.id, p]));
+const productImages = {
+  sin: { src: 'azu-splash.jpg', width: 900, height: 1600 },
+  hair1: { src: 'azu-hair-oil.png', width: 1084, height: 1451 },
+  bukhoor1: { src: 'azu-bukhoor.jpeg', width: 1086, height: 1448 },
+  room1: { src: 'azu-room-spray.png', width: 1122, height: 1402 }
+};
+const CART_KEY = 'azu.cart.v1';
+const LANG_KEY = 'azu.language.v1';
+const WHATSAPP_NUMBER = '9647760975332';
+const MAX_QUANTITY = 99;
+const BUKHOOR_OFFER = Object.freeze({ id: 'bukhoor1', quantity: 4, price: 10000 });
+const DELIVERY_RATES = new Map([['baghdad', 5000], ['other', 10000]]);
+const FREE_DELIVERY_THRESHOLD = 100000;
+let deliveryZone = '';
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+const readStorage = (key) => { try { return localStorage.getItem(key); } catch { return null; } };
+const writeStorage = (key, value) => { try { localStorage.setItem(key, value); } catch { /* The in-memory cart remains usable. */ } };
+let language = readStorage(LANG_KEY) === 'en' ? 'en' : 'ar';
+const ar = () => language === 'ar';
+const t = (arabic, english) => ar() ? arabic : english;
+const escapeHTML = (value) => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'}[char]));
+const localized = (product, field) => product[ar() ? field + 'Ar' : field] || '';
+const money = (amount) => `${new Intl.NumberFormat(ar() ? 'ar-IQ' : 'en-GB', { maximumFractionDigits: 0 }).format(amount)} ${t('د.ع', 'IQD')}`;
+const sizeLabel = (size) => ar() ? size.replace('ml', 'مل').replace(/\bg\b/, 'غ') : size;
 
-        // ============================================================
-        //  STATE
-        // ============================================================
-        let cart = [];
-        let currentLang = 'ar';
-        const isAr = () => currentLang === 'ar';
+function readCart() {
+  try {
+    const saved = JSON.parse(readStorage(CART_KEY) || '[]');
+    if (!Array.isArray(saved)) return [];
+    const valid = new Map();
+    for (const item of saved.slice(0, 500)) {
+      if (item && products.has(item.id) && Number.isInteger(item.qty) && item.qty > 0) {
+        valid.set(item.id, Math.min(MAX_QUANTITY, (valid.get(item.id) || 0) + item.qty));
+      }
+    }
+    return [...valid].map(([id, qty]) => ({ id, qty }));
+  } catch { return []; }
+}
+let cart = readCart();
+let toastTimer;
+let activeProductId = null;
+let modalReturnFocus = null;
+function lineTotal(product, quantity) {
+  if (product.id !== BUKHOOR_OFFER.id) return product.price * quantity;
+  const bundles = Math.floor(quantity / BUKHOOR_OFFER.quantity);
+  const remaining = quantity % BUKHOOR_OFFER.quantity;
+  return bundles * BUKHOOR_OFFER.price + remaining * product.price;
+}
+const hasOffer = product => product.id === BUKHOOR_OFFER.id;
+const offerApplied = item => item.id === BUKHOOR_OFFER.id && item.qty >= BUKHOOR_OFFER.quantity;
+const offerText = () => t('عرض البخور: كل ٤ علب بـ ', 'Bukhoor offer: every 4 boxes for ') + money(BUKHOOR_OFFER.price);
+const cartTotal = () => cart.reduce((total, item) => total + lineTotal(products.get(item.id), item.qty), 0);
+const hasFreeDelivery = () => cart.length > 0 && cartTotal() > FREE_DELIVERY_THRESHOLD;
+const deliveryFee = () => !cart.length || hasFreeDelivery() ? 0 : (DELIVERY_RATES.get(deliveryZone) ?? null);
+const deliveryCostLabel = () => deliveryFee() === null ? t('اختر المنطقة', 'Choose an area') : hasFreeDelivery() ? t('مجاني', 'Free') : money(deliveryFee());
+const orderTotal = () => deliveryFee() === null ? null : cartTotal() + deliveryFee();
+const deliveryZoneLabel = () => deliveryZone === 'baghdad' ? t('بغداد', 'Baghdad') : t('باقي محافظات العراق', 'Other Iraqi governorates');
 
-        // ============================================================
-        //  RENDER PRODUCTS
-        // ============================================================
-        function renderProducts() {
-            const container = document.getElementById('productList');
-            let html = '';
-            productCategories.forEach((cat, index) => {
-                const catName = isAr() ? cat.name : cat.nameEn;
-                html += `
-                    <div class="category-section">
-                        <div class="cat-head" data-target="cat-${index}">
-                            <span class="cat-title">${catName}</span>
-                            <span class="toggle-icon">▾</span>
-                        </div>
-                        <div class="category-products" id="cat-${index}">
-                `;
-                cat.products.forEach(p => {
-                    const name = isAr() ? p.nameAr : p.name;
-                    const sub = isAr() ? p.subAr : p.sub;
-                    const desc = isAr() ? p.descAr : p.desc;
-                    const priceDisplay = isAr() ? `${p.price.toLocaleString()} د.ع` : `${p.price.toLocaleString()} IQD`;
-                    html += `
-                        <div class="product-row">
-                            <div class="info">
-                                <h3>${name}</h3>
-                                <div class="sub">${sub}</div>
-                                <div class="short-desc">${desc} - ${priceDisplay} / ${p.size}</div>
-                            </div>
-                            <div class="action">
-                                <button class="btn-gold btn-gold-filled view-product" data-id="${p.id}">اكتشف</button>
-                            </div>
-                        </div>
-                    `;
-                });
-                html += `</div></div>`;
-            });
-            container.innerHTML = html;
+function renderDeliveryOptions() {
+  const options = `<option value="">${t('اختر منطقة التوصيل', 'Choose delivery area')}</option><option value="baghdad">${t('بغداد', 'Baghdad')}</option><option value="other">${t('باقي محافظات العراق', 'Other Iraqi governorates')}</option>`;
+  for (const select of $$('.delivery-zone')) { select.innerHTML = options; select.value = deliveryZone; }
+  $$('.delivery-rates').forEach(element => {
+    element.textContent = `${t('بغداد', 'Baghdad')}: ${money(5000)} · ${t('باقي المحافظات', 'Other governorates')}: ${money(10000)}\n${t('توصيل مجاني للطلبات فوق ', 'Free delivery for orders over ')}${money(FREE_DELIVERY_THRESHOLD)}${t(' بعد العروض.', ' after offers.')}`;
+  });
+}
 
-            document.querySelectorAll('.cat-head').forEach(head => {
-                head.addEventListener('click', function(e) {
-                    const targetId = this.dataset.target;
-                    const productsDiv = document.getElementById(targetId);
-                    if (productsDiv) {
-                        productsDiv.classList.toggle('open');
-                        this.classList.toggle('open');
-                    }
-                });
-            });
+function setDeliveryZone(value) {
+  deliveryZone = DELIVERY_RATES.has(value) ? value : '';
+  fieldError('checkoutDeliveryZone', '');
+  renderCart();
+}
 
-            document.querySelectorAll('.view-product').forEach(btn => {
-                btn.addEventListener('click', () => openProduct(btn.dataset.id));
-            });
-        }
+// Translate every static interface element while retaining the supplied Arabic copy.
+const translations = [
+  ['.skip-link', 'Skip to content'],
+  ['.nav-links a, .footer-grid .col:nth-child(2) a', ['Home', 'Collection', 'About us', 'Contact', 'Home', 'Collection', 'About us', 'Contact']],
+  ['#home .section-label', 'Fragrance inspired by civilization'],
+  ['#home .tagline, footer .tag', '“From Mesopotamia to your world.”'],
+  ['#home .desc', 'A modern fragrance house inspired by the stories, myths and spirit of ancient Mesopotamia.'],
+  ['.hero-buttons a', ['Discover ĀZU', 'About us']],
+  ['#collection .section-label', 'The collection'],
+  ['#collection .section-title', '“The collection”'],
+  ['#mesopotamia .section-label', 'Mesopotamia'],
+  ['#mesopotamia .section-title', '“Where stories became legends.”'],
+  ['#mesopotamia .meso-text p', [
+    'ĀZU draws inspiration from the enduring land of Iraq and its Sumerian and Akkadian civilizations, where some of the earliest writings and myths emerged.',
+    'We reimagine the scent of the past through contemporary compositions that evoke the Tigris and Euphrates, the warmth of the desert and the allure of ancient gold.',
+    'Every ĀZU fragrance is a journey through time, an invitation to discover the beauty of Mesopotamia with a modern sensibility.'
+  ]],
+  ['#categories .section-label', 'Categories'],
+  ['#categories .section-title', 'Scents that speak'],
+  ['.cat-item h4', ['Perfumes', 'Body mist', 'Room fragrance', 'Hair oil', 'Bukhoor']],
+  ['.cat-item p', ['Scents that leave a presence', 'Lasting freshness', 'An atmosphere of refinement', 'Lasting luxury, coming soon', 'Ancient smoke, a modern expression']],
+  ['#story .section-label', 'About ĀZU'],
+  ['#story .section-title', 'Who we are'],
+  ['#story p', [
+    'ĀZU is a modern niche fragrance house inspired by the spirit of Mesopotamian civilizations. Within our identity, the name evokes wisdom, healing and the keeping of secrets: a vision that transforms fragrance into a sensory and emotional ritual.',
+    'At ĀZU, fragrance is memory, presence, identity and a trace that lingers beyond the moment. Every creation aims to awaken emotion and express individuality through a memorable sensory experience.',
+    'Our collections include perfumes, bukhoor, room fragrances and hair oils, created with a vision that brings together authenticity, artistry and modern luxury. Inspired by mythology, poetry and Mesopotamian heritage, ĀZU has an identity shaped by mystery, expression and human depth.',
+    'ĀZU — We distil memory into a bottle.'
+  ]],
+  ['#story .highlight', 'We create experiences, each with its own identity.'],
+  ['.footer-grid .col h4', ['Explore', 'Connect', 'Support']],
+  ['.bottom', '© 2026 ĀZU — All rights reserved'],
+  ['.cart-heading', 'Your bag'],
+  ['#cartTotalWrap > span:first-child', 'Subtotal'],
+  ['label[for="cartDeliveryZone"], label[for="checkoutDeliveryZone"]', 'Delivery area'],
+  ['.delivery-fee-label', 'Delivery'],
+  ['.order-total-label', 'Total including delivery'],
+  ['.checkout-subtotal-label', 'Product subtotal'],
+  ['#openCheckoutBtn', 'Continue to order'],
+  ['#checkoutTitle', 'Complete your order'],
+  ['.checkout-help', 'Enter your details to prepare your order.'],
+  ['label[for="custName"]', 'Full name'],
+  ['label[for="custPhone"]', 'Phone number (for confirmation)'],
+  ['label[for="custAddress"]', 'Address (city / area)'],
+  ['label[for="custNotes"]', 'Additional notes (optional)'],
+  ['#submitOrderBtn', 'Continue on WhatsApp'],
+  ['.checkout-note', 'Review and send the message in WhatsApp to confirm your order with the ĀZU team.'],
+  ['#whatsappOrderLink', 'Open your prepared WhatsApp message'],
+  ['.intro-caption', 'From Mesopotamia to your world.'],
+  ['.intro-skip', 'Skip intro']
+];
+const textBindings = translations.flatMap(([selector, english]) => $$(selector).map((element, index) => ({ element, arabic: element.textContent, english: Array.isArray(english) ? english[index] : english })));
+const placeholders = [
+  ['#custName', 'Enter your name'], ['#custPhone', '07XXXXXXXXX'],
+  ['#custAddress', 'Example: Baghdad — Al-Mansour'], ['#custNotes', 'Any additional details…']
+].map(([selector, english]) => ({ element: $(selector), arabic: $(selector).placeholder, english }));
 
-        // ============================================================
-        //  HELPER
-        // ============================================================
-        function findProduct(id) {
-            for (let cat of productCategories) {
-                const found = cat.products.find(p => p.id === id);
-                if (found) return found;
-            }
-            return null;
-        }
+function applyLanguage() {
+  document.documentElement.lang = language;
+  document.documentElement.dir = ar() ? 'rtl' : 'ltr';
+  document.title = t('ĀZU | من بلاد الرافدين إلى عالمك', 'ĀZU | From Mesopotamia to your world');
+  $('meta[name="description"]').content = t('آزو، دار عطور عراقية الجذور. اكتشف المجموعة وقصة العلامة واطلب عبر واتساب.', 'ĀZU, a fragrance house with Iraqi roots. Explore the collection, discover our story and order through WhatsApp.');
+  textBindings.forEach(binding => { binding.element.textContent = ar() ? binding.arabic : binding.english; });
+  placeholders.forEach(binding => { binding.element.placeholder = ar() ? binding.arabic : binding.english; });
+  $('#langToggle').textContent = ar() ? 'EN' : 'ع';
+  $('#langToggle').setAttribute('aria-label', t('Switch to English', 'التبديل إلى العربية'));
+  $('#langToggle').lang = ar() ? 'en' : 'ar';
+  $('#navbar').setAttribute('aria-label', t('التنقل الرئيسي', 'Main navigation'));
+  $('#menuToggle').setAttribute('aria-label', t('القائمة', 'Menu'));
+  $('#closeModal').setAttribute('aria-label', t('إغلاق تفاصيل المنتج', 'Close product details'));
+  $('#closeCheckout').setAttribute('aria-label', t('إغلاق الطلب', 'Close checkout'));
+  $('.whatsapp-fab').setAttribute('aria-label', t('تواصل مع آزو عبر واتساب', 'Contact ĀZU on WhatsApp'));
+  $('#brandIntro').setAttribute('aria-label', t('مرحباً بك في آزو', 'Welcome to ĀZU'));
+  renderProducts();
+  renderCart();
+  updateNavbarHeight();
+}
 
-        // ============================================================
-        //  MODAL
-        // ============================================================
-        function openProduct(id) {
-            const p = findProduct(id);
-            if (!p) return;
-            const isArabic = isAr();
-            const name = isArabic ? p.nameAr : p.name;
-            const sub = isArabic ? p.subAr : p.sub;
-            const desc = isArabic ? p.descAr : p.desc;
-            const family = isArabic ? p.familyAr : p.family;
-            const top = isArabic ? p.topAr : p.top;
-            const heart = isArabic ? p.heartAr : p.heart;
-            const base = isArabic ? p.baseAr : p.base;
-            const priceStr = isArabic ? `${p.price.toLocaleString()} د.ع` : `${p.price.toLocaleString()} IQD`;
-            const ingredients = isArabic ? p.ingredientsAr : p.ingredients;
-            const usage = isArabic ? p.usageAr : p.usage;
-            const warnings = isArabic ? p.warningsAr : p.warnings;
+function productImage(product, detail = false) {
+  const photo = productImages[product.id];
+  if (!photo) return '';
+  return `<img class="product-photo${detail ? ' product-photo-detail' : ''}" src="${photo.src}" width="${photo.width}" height="${photo.height}" alt="${escapeHTML(t('صورة ', 'Photo of ') + localized(product, 'name'))}" loading="${detail ? 'eager' : 'lazy'}" decoding="async">`;
+}
 
-            let notesHtml = '';
-            if (top || heart || base) {
-                notesHtml = `
-                    <div class="notes">
-                        ${top ? `<div><strong>${isArabic ? 'الرأس' : 'Top'}</strong>${top}</div>` : ''}
-                        ${heart ? `<div><strong>${isArabic ? 'القلب' : 'Heart'}</strong>${heart}</div>` : ''}
-                        ${base ? `<div><strong>${isArabic ? 'القاعدة' : 'Base'}</strong>${base}</div>` : ''}
-                    </div>
-                `;
-            }
+function renderProducts() {
+  const openCategories = new Set($$('.category-section[open]').map(item => item.id));
+  $('#productList').innerHTML = productCategories.map((category, index) => `
+    <details class="category-section" id="category-${index}" ${openCategories.has(`category-${index}`) ? 'open' : ''}>
+      <summary class="cat-head"><span class="cat-title">${escapeHTML(ar() ? category.name : category.nameEn)}</span><span class="toggle-icon" aria-hidden="true">▾</span></summary>
+      <div class="category-products">${category.products.map(p => `
+        <article class="product-row">
+          ${productImage(p)}
+          <div class="info"><h3>${escapeHTML(localized(p, 'name'))}</h3><div class="sub">${escapeHTML(localized(p, 'sub'))}</div>
+          <p class="short-desc">${escapeHTML(localized(p, 'desc'))}</p><span class="product-price">${money(p.price)} <span aria-hidden="true">/</span> <bdi>${escapeHTML(sizeLabel(p.size))}</bdi></span>${hasOffer(p) ? `<p class="offer-note product-offer">${offerText()}</p>` : ''}</div>
+          <div class="action"><button type="button" class="btn-gold btn-gold-filled view-product" data-id="${p.id}" aria-label="${escapeHTML(t('اكتشف ', 'Discover ') + localized(p, 'name'))}">${t('اكتشف', 'Discover')}</button></div>
+        </article>`).join('')}
+      </div>
+    </details>`).join('');
+}
 
-            let extraHtml = '';
-            if (ingredients) {
-                extraHtml += `
-                    <div class="detail-block">
-                        <div class="detail-title">${isArabic ? 'المكونات' : 'Ingredients'}</div>
-                        <div class="detail-text">${ingredients}</div>
-                    </div>
-                `;
-            }
-            if (usage) {
-                extraHtml += `
-                    <div class="detail-block">
-                        <div class="detail-title">${isArabic ? 'طريقة الاستخدام' : 'Usage Instructions'}</div>
-                        <div class="detail-text">${usage}</div>
-                    </div>
-                `;
-            }
-            if (warnings) {
-                extraHtml += `
-                    <div class="detail-block">
-                        <div class="detail-title">${isArabic ? 'تحذيرات' : 'Warnings'}</div>
-                        <div class="detail-text">${warnings}</div>
-                    </div>
-                `;
-            }
+function notify(message) {
+  clearTimeout(toastTimer);
+  $('#toast').textContent = message;
+  $('#toast').classList.add('show');
+  toastTimer = setTimeout(() => $('#toast').classList.remove('show'), 2800);
+}
+function setCartOpen(open, restoreFocus = false) {
+  $('#cartDropdown').hidden = !open;
+  $('#cartDropdown').classList.toggle('open', open);
+  $('#cartToggle').setAttribute('aria-expanded', String(open));
+  if (restoreFocus) $('#cartToggle').focus();
+}
+function renderCart() {
+  const count = cart.reduce((sum, item) => sum + item.qty, 0);
+  $('#cartCount').textContent = count;
+  $('#cartToggle').setAttribute('aria-label', t(`السلة، ${count} قطعة`, `Bag, ${count} items`));
+  $('#cartTotalWrap').hidden = !cart.length;
+  $('#cartTotalWrap').style.display = cart.length ? 'flex' : 'none';
+  $('#openCheckoutBtn').disabled = !cart.length;
+  $('#cartTotal').textContent = money(cartTotal());
+  $('#cartDeliveryDetails').hidden = !cart.length;
+  renderDeliveryOptions();
+  $('#cartDeliveryFee').textContent = deliveryCostLabel();
+  $('#cartGrandTotal').textContent = orderTotal() === null ? '—' : money(orderTotal());
+  $('#cartItems').innerHTML = cart.length ? cart.map(item => {
+    const p = products.get(item.id);
+    const name = escapeHTML(localized(p, 'name'));
+    return `<div class="cart-item"><div class="cart-item-info"><strong>${name}</strong><small>${money(lineTotal(p, item.qty))}</small>${offerApplied(item) ? `<small class="offer-note">${t('تم تطبيق عرض البخور', 'Bukhoor offer applied')}</small>` : ''}</div>
+      <div class="quantity-controls"><button type="button" data-action="decrease" data-id="${p.id}" aria-label="${t('تقليل كمية ', 'Decrease quantity of ')}${name}">−</button><span>${item.qty}</span><button type="button" data-action="increase" data-id="${p.id}" ${item.qty >= MAX_QUANTITY ? 'disabled' : ''} aria-label="${t('زيادة كمية ', 'Increase quantity of ')}${name}">+</button></div>
+      <button type="button" class="remove-item" data-action="remove" data-id="${p.id}" aria-label="${t('حذف ', 'Remove ')}${name}">×</button></div>`;
+  }).join('') : `<div class="empty-msg">${t('السلة فارغة', 'Your bag is empty')}</div>`;
+  if ($('#checkoutModal').open) renderCheckoutSummary();
+}
+function saveCart() {
+  writeStorage(CART_KEY, JSON.stringify(cart));
+  renderCart();
+}
+function addToCart(id) {
+  if (!products.has(id)) return;
+  const existing = cart.find(item => item.id === id);
+  if (existing && existing.qty >= MAX_QUANTITY) { notify(t('وصلت إلى الحد الأقصى للكمية.', 'Maximum quantity reached.')); return; }
+  if (existing) existing.qty++;
+  else cart.push({ id, qty: 1 });
+  saveCart();
+  notify(t('أُضيف إلى السلة: ', 'Added to your bag: ') + localized(products.get(id), 'name'));
+}
 
-            document.getElementById('modalBody').innerHTML = `
-                <div class="product-name">${name}</div>
-                <div class="product-sub">${sub}</div>
-                <div class="product-desc">${desc}</div>
-                ${notesHtml}
-                ${extraHtml ? `<div class="extra-details">${extraHtml}</div>` : ''}
-                <div class="price-row">
-                    <span>${priceStr}</span>
-                    <span class="size">${p.size}</span>
-                </div>
-                <button class="add-cart" data-id="${p.id}">${isArabic ? 'أضف إلى السلة' : 'Add to Cart'}</button>
-            `;
-            document.getElementById('productModal').classList.add('open');
-            document.querySelector('.add-cart').addEventListener('click', () => {
-                addToCart(p.id);
-                document.getElementById('productModal').classList.remove('open');
-            });
-        }
+function openDialog(dialog, trigger) {
+  modalReturnFocus = trigger || document.activeElement;
+  setCartOpen(false);
+  setMenuOpen(false);
+  document.body.classList.add('modal-open');
+  dialog.showModal();
+}
+function setupDialog(dialog) {
+  dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
+  dialog.addEventListener('close', () => {
+    document.body.classList.remove('modal-open');
+    if (modalReturnFocus?.isConnected) modalReturnFocus.focus({ preventScroll: true });
+    modalReturnFocus = null;
+    if (dialog.id === 'productModal') activeProductId = null;
+  });
+}
+function openProduct(id, trigger) {
+  const p = products.get(id);
+  if (!p) return;
+  activeProductId = id;
+  const notes = [['top', t('الرأس', 'Top')], ['heart', t('القلب', 'Heart')], ['base', t('القاعدة', 'Base')]].filter(([field]) => localized(p, field));
+  const details = [['family', t('العائلة العطرية', 'Fragrance family')], ['ingredients', t('المكونات', 'Ingredients')], ['usage', t('طريقة الاستخدام', 'How to use')], ['warnings', t('تحذيرات', 'Warnings')]].filter(([field]) => localized(p, field));
+  $('#modalBody').innerHTML = `${productImage(p, true)}<h2 id="productTitle" class="product-name">${escapeHTML(localized(p, 'name'))}</h2>
+    <p class="product-sub">${escapeHTML(localized(p, 'sub'))}</p><p class="product-desc">${escapeHTML(localized(p, 'desc'))}</p>
+    ${notes.length ? `<div class="notes">${notes.map(([field, label]) => `<div><strong>${label}</strong>${escapeHTML(localized(p, field))}</div>`).join('')}</div>` : ''}
+    <div class="extra-details">${details.map(([field, label]) => `<div class="detail-block"><h3 class="detail-title">${label}</h3><p class="detail-text">${escapeHTML(localized(p, field))}</p></div>`).join('')}</div>
+    <div class="price-row"><span>${money(p.price)}</span><bdi class="size">${escapeHTML(sizeLabel(p.size))}</bdi></div>
+    ${hasOffer(p) ? `<p class="offer-note product-offer">${offerText()}<br>${t('تُحسب العلب المتبقية بسعر العلبة الواحدة.', 'Remaining boxes are charged at the single-box price.')}</p>` : ''}
+    <button type="button" class="add-cart">${t('أضف إلى السلة', 'Add to bag')}</button>`;
+  openDialog($('#productModal'), trigger);
+  $('.modal-content').scrollTop = 0;
+}
 
-        function closeModal() { document.getElementById('productModal').classList.remove('open'); }
-        document.getElementById('closeModal').addEventListener('click', closeModal);
-        document.getElementById('productModal').addEventListener('click', (e) => {
-            if (e.target === e.currentTarget) closeModal();
-        });
+function setMenuOpen(open) {
+  $('#navbar').classList.toggle('menu-open', open);
+  $('#menuToggle').setAttribute('aria-expanded', String(open));
+}
+function updateNavbarHeight() {
+  if (!$('#navbar').classList.contains('menu-open')) document.documentElement.style.setProperty('--nav-height', `${$('#navbar').offsetHeight}px`);
+}
+function renderCheckoutSummary() {
+  $('#checkoutSummary').innerHTML = cart.map(item => `<div>${escapeHTML(localized(products.get(item.id), 'name'))} × ${item.qty} = ${money(lineTotal(products.get(item.id), item.qty))}${offerApplied(item) ? `<span class="offer-note">${offerText()}</span>` : ''}</div>`).join('');
+  $('#checkoutSubtotal').textContent = money(cartTotal());
+  $('#checkoutDeliveryFee').textContent = deliveryCostLabel();
+  $('#checkoutTotal').textContent = orderTotal() === null ? '—' : money(orderTotal());
+  $('#submitOrderBtn').disabled = !cart.length;
+  $('#orderFeedback').textContent = '';
+  $('#whatsappOrderLink').hidden = true;
+  $('#whatsappOrderLink').removeAttribute('href');
+}
+function openCheckout(trigger) {
+  if (!cart.length) { notify(t('أضف منتجات إلى السلة أولاً.', 'Add a product to your bag first.')); return; }
+  renderCheckoutSummary();
+  openDialog($('#checkoutModal'), trigger || $('#cartToggle'));
+  $('.checkout-content').scrollTop = 0;
+  $('#custName').focus();
+}
+const normalizePhone = value => value.replace(/[٠-٩]/g, digit => String(digit.charCodeAt(0) - 1632)).replace(/[۰-۹]/g, digit => String(digit.charCodeAt(0) - 1776)).replace(/[\s()\-]/g, '');
+function fieldError(id, message) {
+  const input = $('#' + id);
+  input.setAttribute('aria-invalid', message ? 'true' : 'false');
+  $('#' + id + 'Error').textContent = message;
+}
+function submitOrder(event) {
+  event.preventDefault();
+  if (!cart.length) { notify(t('السلة فارغة.', 'Your bag is empty.')); return; }
+  const name = $('#custName').value.trim();
+  const phone = normalizePhone($('#custPhone').value.trim());
+  const address = $('#custAddress').value.trim();
+  const notes = $('#custNotes').value.trim();
+  fieldError('custName', name.length >= 2 ? '' : t('يرجى إدخال الاسم الكامل.', 'Please enter your full name.'));
+  fieldError('custPhone', /^(?:07\d{9}|(?:\+?964|00964)7\d{9})$/.test(phone) ? '' : t('أدخل رقم موبايل عراقي صحيحاً: 07xxxxxxxxx أو +9647xxxxxxxxx.', 'Enter an Iraqi mobile number: 07xxxxxxxxx or +9647xxxxxxxxx.'));
+  fieldError('custAddress', address.length >= 3 ? '' : t('يرجى إدخال المدينة والمنطقة.', 'Please enter your city and area.'));
+  fieldError('checkoutDeliveryZone', DELIVERY_RATES.has(deliveryZone) ? '' : t('يرجى اختيار منطقة التوصيل.', 'Please choose a delivery area.'));
+  const invalid = $('[aria-invalid="true"]', $('#checkoutForm'));
+  if (invalid) { invalid.focus(); return; }
+  const lines = [t('*طلب جديد من موقع ĀZU*', '*New order from ĀZU*'), `${t('الاسم', 'Name')}: ${name}`, `${t('الهاتف', 'Phone')}: ${phone}`, `${t('العنوان', 'Address')}: ${address}`];
+  if (notes) lines.push(`${t('ملاحظات', 'Notes')}: ${notes}`);
+  lines.push('', t('*المنتجات:*', '*Products:*'));
+  for (const item of cart) {
+    const p = products.get(item.id);
+    lines.push(`- ${localized(p, 'name')} (${sizeLabel(p.size)}) × ${item.qty} = ${money(lineTotal(p, item.qty))}`);
+    if (offerApplied(item)) lines.push(`  ${offerText()}`);
+  }
+  lines.push('', `${t('مجموع المنتجات', 'Product subtotal')}: ${money(cartTotal())}`,
+    `${t('منطقة التوصيل', 'Delivery area')}: ${deliveryZoneLabel()}`,
+    `${t('سعر التوصيل', 'Delivery fee')}: ${hasFreeDelivery() ? `${t('مجاني', 'Free')} (${money(0)})` : money(deliveryFee())}`,
+    `${t('الإجمالي شامل التوصيل', 'Total including delivery')}: ${money(orderTotal())}`);
+  const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join('\n'))}`;
+  $('#whatsappOrderLink').href = url;
+  $('#whatsappOrderLink').hidden = false;
+  $('#orderFeedback').textContent = t('جهّزنا تفاصيل الطلب. راجع الرسالة وأرسلها في واتساب لتأكيده.', 'Your order details are ready. Review and send the message in WhatsApp to confirm.');
+  // Opening WhatsApp prepares a draft; it does not prove that an order was sent.
+  // Keep the cart and form available if the customer returns or a popup is blocked.
+  window.open(url, '_blank', 'noopener,noreferrer');
+}
 
-        // ============================================================
-        //  CART
-        // ============================================================
-        function addToCart(id) {
-            const existing = cart.find(item => item.id === id);
-            if (existing) existing.qty += 1;
-            else cart.push({ id, qty: 1 });
-            updateCartUI();
-        }
+$('#productList').addEventListener('click', event => { const button = event.target.closest('.view-product'); if (button) openProduct(button.dataset.id, button); });
+$('#modalBody').addEventListener('click', event => { if (event.target.closest('.add-cart') && activeProductId) { addToCart(activeProductId); $('#productModal').close(); } });
+$('#closeModal').addEventListener('click', () => $('#productModal').close());
+$('#closeCheckout').addEventListener('click', () => $('#checkoutModal').close());
+setupDialog($('#productModal'));
+setupDialog($('#checkoutModal'));
+$('#cartToggle').addEventListener('click', () => setCartOpen($('#cartDropdown').hidden));
+$('#cartItems').addEventListener('click', event => {
+  const button = event.target.closest('button[data-action]');
+  if (!button) return;
+  // Rendering replaces the clicked button; keep that detached target from
+  // being mistaken for an outside click by the document listener.
+  event.stopPropagation();
+  const { id, action } = button.dataset;
+  const item = cart.find(entry => entry.id === id);
+  if (!item) return;
+  if (action === 'increase') item.qty = Math.min(MAX_QUANTITY, item.qty + 1);
+  if (action === 'decrease') item.qty--;
+  if (action === 'remove' || item.qty < 1) cart = cart.filter(entry => entry.id !== id);
+  saveCart();
+  const next = $(`button[data-id="${id}"][data-action="${action}"]`, $('#cartItems'));
+  (next && !next.disabled ? next : $('.quantity-controls button, .remove-item', $('#cartItems')) || $('#cartToggle')).focus();
+});
+$('#menuToggle').addEventListener('click', () => setMenuOpen(!$('#navbar').classList.contains('menu-open')));
+document.addEventListener('click', event => {
+  if (!$('#cartDropdown').contains(event.target) && !$('#cartToggle').contains(event.target)) setCartOpen(false);
+  if (!$('#navbar').contains(event.target)) setMenuOpen(false);
+  if (event.target.closest('.nav-links a')) setMenuOpen(false);
+});
+document.addEventListener('keydown', event => {
+  if (event.key !== 'Escape') return;
+  if (!$('#cartDropdown').hidden) setCartOpen(false, true);
+  if ($('#navbar').classList.contains('menu-open')) { setMenuOpen(false); $('#menuToggle').focus(); }
+});
+$('#navbar').addEventListener('focusout', event => { if (event.relatedTarget && !$('#navbar').contains(event.relatedTarget)) { setCartOpen(false); setMenuOpen(false); } });
+$('#langToggle').addEventListener('click', () => { language = ar() ? 'en' : 'ar'; writeStorage(LANG_KEY, language); applyLanguage(); });
+$('#openCheckoutBtn').addEventListener('click', () => openCheckout($('#cartToggle')));
+$$('.delivery-zone').forEach(select => select.addEventListener('change', event => setDeliveryZone(event.target.value)));
+$('#checkoutForm').addEventListener('submit', submitOrder);
+$('#checkoutForm').addEventListener('input', event => {
+  if (['custName', 'custPhone', 'custAddress'].includes(event.target.id)) fieldError(event.target.id, '');
+  $('#orderFeedback').textContent = '';
+  $('#whatsappOrderLink').hidden = true;
+});
+window.addEventListener('storage', event => { if (event.key === CART_KEY || event.key === null) { cart = readCart(); renderCart(); } });
+if ('ResizeObserver' in window) new ResizeObserver(updateNavbarHeight).observe($('#navbar'));
+else window.addEventListener('resize', updateNavbarHeight, { passive: true });
 
-        function removeFromCart(id) {
-            cart = cart.filter(item => item.id !== id);
-            updateCartUI();
-        }
+function setupReveal() {
+  if (reducedMotion.matches || !('IntersectionObserver' in window)) return;
+  const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+    if (entry.isIntersecting) { entry.target.classList.remove('is-pending'); entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+  }), { threshold: 0.08 });
+  $$('.reveal').forEach(element => { if (element.getBoundingClientRect().top > innerHeight) { element.classList.add('is-pending'); observer.observe(element); } });
+}
+function startIntro() {
+  let seen = false;
+  try { seen = sessionStorage.getItem('azu.intro.v1') === 'seen'; sessionStorage.setItem('azu.intro.v1', 'seen'); } catch { /* Intro still exits automatically. */ }
+  if (seen || reducedMotion.matches || location.hash) return;
+  const intro = $('#brandIntro');
+  if (typeof intro.showModal !== 'function') return;
+  document.body.classList.add('modal-open');
+  intro.showModal();
+  const exit = () => { if (intro.open) intro.close(); };
+  const fadeTimer = setTimeout(() => intro.classList.add('is-leaving'), 1100);
+  const closeTimer = setTimeout(exit, 1400);
+  $('.intro-skip').addEventListener('click', exit);
+  intro.addEventListener('close', () => { clearTimeout(fadeTimer); clearTimeout(closeTimer); document.body.classList.remove('modal-open'); }, { once: true });
+}
 
-        function updateCartUI() {
-            const totalItems = cart.reduce((sum, i) => sum + i.qty, 0);
-            document.getElementById('cartCount').textContent = totalItems;
-            const container = document.getElementById('cartItems');
-            const totalWrap = document.getElementById('cartTotalWrap');
-            const totalSpan = document.getElementById('cartTotal');
-            if (cart.length === 0) {
-                container.innerHTML = '<div class="empty-msg">السلة فارغة</div>';
-                totalWrap.style.display = 'none';
-                return;
-            }
-            let html = '';
-            let totalPrice = 0;
-            cart.forEach(item => {
-                const p = findProduct(item.id);
-                if (!p) return;
-                const name = isAr() ? p.nameAr : p.name;
-                const price = p.price * item.qty;
-                totalPrice += price;
-                const priceStr = isAr() ? `${price.toLocaleString()} د.ع` : `${price.toLocaleString()} IQD`;
-                html += `<div class="cart-item"><span>${name} ×${item.qty}</span><span>${priceStr} <button class="remove-item" data-id="${item.id}">✕</button></span></div>`;
-            });
-            container.innerHTML = html;
-            totalSpan.textContent = isAr() ? `${totalPrice.toLocaleString()} د.ع` : `${totalPrice.toLocaleString()} IQD`;
-            totalWrap.style.display = 'flex';
-            document.querySelectorAll('.remove-item').forEach(btn => btn.addEventListener('click', () =>
-                removeFromCart(btn.dataset.id)));
-        }
+// Optional structured access in browsers that implement WebMCP. No contact
+// details or external checkout actions are exposed to agents.
+function setupModelContext() {
+  if (!document.modelContext?.registerTool) return;
+  const lifecycle = new AbortController();
+  const register = tool => { try { Promise.resolve(document.modelContext.registerTool(tool, { signal: lifecycle.signal })).catch(() => {}); } catch { /* Unsupported proposal versions must not affect shopping. */ } };
+  register({ name: 'azu_read_catalog', title: 'Read ĀZU catalog', description: 'Read the displayed catalog and current device-local cart.', inputSchema: { type: 'object', properties: {}, additionalProperties: false }, annotations: { readOnlyHint: true, untrustedContentHint: false }, execute(input) {
+    if (!input || typeof input !== 'object' || Array.isArray(input) || Object.keys(input).length) throw new Error('Expected an empty object.');
+    return { currency: 'IQD', products: [...products.values()].map(p => ({ id: p.id, name: localized(p, 'name'), size: p.size, price: p.price, ...(hasOffer(p) ? { offer: { quantity: BUKHOOR_OFFER.quantity, price: BUKHOOR_OFFER.price } } : {}) })), cart: cart.map(item => ({ ...item, total: lineTotal(products.get(item.id), item.qty) })), subtotal: cartTotal(), deliveryZone: deliveryZone || null, deliveryFee: deliveryFee(), total: orderTotal() };
+  }});
+  register({ name: 'azu_open_product', title: 'View ĀZU product', description: 'Open product details. Does not add to the bag or place an order.', inputSchema: { type: 'object', properties: { id: { type: 'string' } }, required: ['id'], additionalProperties: false }, annotations: { readOnlyHint: false, untrustedContentHint: false }, execute(input) {
+    if (!input || typeof input !== 'object' || Array.isArray(input) || Object.keys(input).length !== 1 || typeof input.id !== 'string' || !products.has(input.id)) throw new Error('Unknown product.');
+    if ($('dialog[open]')) throw new Error('Close the current dialog first.');
+    openProduct(input.id);
+    return { opened: input.id };
+  }});
+  window.addEventListener('pagehide', event => { if (!event.persisted) lifecycle.abort(); });
+}
+applyLanguage();
+setupReveal();
+startIntro();
+setupModelContext();
 
-        // ============================================================
-        //  TOGGLES
-        // ============================================================
-        document.getElementById('cartToggle').addEventListener('click', (e) => {
-            e.stopPropagation();
-            document.getElementById('cartDropdown').classList.toggle('open');
-        });
-        document.addEventListener('click', (e) => {
-            const dropdown = document.getElementById('cartDropdown');
-            if (!dropdown.contains(e.target) && e.target.id !== 'cartToggle') dropdown.classList.remove('open');
-        });
-
-        document.getElementById('langToggle').addEventListener('click', () => {
-            currentLang = currentLang === 'ar' ? 'en' : 'ar';
-            document.documentElement.lang = currentLang;
-            document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
-            document.getElementById('langToggle').textContent = currentLang === 'ar' ? 'EN' : 'ع';
-            renderProducts();
-            updateCartUI();
-            closeModal();
-        });
-
-        // ============================================================
-        //  SCROLL REVEAL
-        // ============================================================
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-        // ============================================================
-        //  CHECKOUT
-        // ============================================================
-        function openCheckout() {
-            if (cart.length === 0) { alert('السلة فارغة. أضف منتجات أولاً.'); return; }
-            document.getElementById('checkoutModal').classList.add('open');
-            let summaryHtml = '';
-            let total = 0;
-            cart.forEach(item => {
-                const p = findProduct(item.id);
-                if (!p) return;
-                const name = isAr() ? p.nameAr : p.name;
-                const price = p.price * item.qty;
-                total += price;
-                summaryHtml += `<div>${name} × ${item.qty} = ${isAr() ? price.toLocaleString() : price.toLocaleString()} ${isAr() ? 'د.ع' : 'IQD'}</div>`;
-            });
-            document.getElementById('checkoutSummary').innerHTML = summaryHtml;
-            document.getElementById('checkoutTotal').textContent = isAr() ? `${total.toLocaleString()} د.ع` :
-                `${total.toLocaleString()} IQD`;
-        }
-
-        function closeCheckout() { document.getElementById('checkoutModal').classList.remove('open'); }
-        document.getElementById('openCheckoutBtn').addEventListener('click', openCheckout);
-        document.getElementById('closeCheckout').addEventListener('click', closeCheckout);
-        document.getElementById('checkoutModal').addEventListener('click', (e) => {
-            if (e.target === e.currentTarget) closeCheckout();
-        });
-
-        document.getElementById('submitOrderBtn').addEventListener('click', function() {
-            const name = document.getElementById('custName').value.trim();
-            const phone = document.getElementById('custPhone').value.trim();
-            const address = document.getElementById('custAddress').value.trim();
-            const notes = document.getElementById('custNotes').value.trim();
-            if (!name || !phone || !address) {
-                alert('الرجاء تعبئة جميع الحقول الأساسية (الاسم، الهاتف، العنوان).');
-                return;
-            }
-            let orderDetails = '🛍️ *طلب جديد من موقع ĀZU*%0A';
-            orderDetails += `👤 *الاسم:* ${name}%0A`;
-            orderDetails += `📞 *الهاتف:* ${phone}%0A`;
-            orderDetails += `📍 *العنوان:* ${address}%0A`;
-            if (notes) orderDetails += `📝 *ملاحظات:* ${notes}%0A`;
-            orderDetails += `%0A📦 *المنتجات:*%0A`;
-            let total = 0;
-            cart.forEach(item => {
-                const p = findProduct(item.id);
-                if (!p) return;
-                const pName = isAr() ? p.nameAr : p.name;
-                const price = p.price * item.qty;
-                total += price;
-                orderDetails += `- ${pName} (×${item.qty}) = ${price.toLocaleString()} ${isAr() ? 'د.ع' : 'IQD'}%0A`;
-            });
-            orderDetails += `%0A💰 *المجموع الكلي:* ${total.toLocaleString()} ${isAr() ? 'د.ع' : 'IQD'}`;
-            // رقم واتساب الصحيح
-            const phoneNumber = '9647760975332';
-            const url = `https://wa.me/${phoneNumber}?text=${orderDetails}`;
-            window.open(url, '_blank');
-            cart = [];
-            updateCartUI();
-            closeCheckout();
-            alert('تم إرسال طلبك بنجاح! سيتم توجيهك إلى واتساب لتأكيد الطلب.');
-        });
-
-        // ============================================================
-        //  INIT
-        // ============================================================
-        renderProducts();
-        updateCartUI();
-        console.log('ĀZU website loaded with fixed WhatsApp links!');
+})();
     </script>
 </body>
 </html>
